@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Login & Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+
+        
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <form method="post" action="connexion.php?route=login" class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="ID" name="ID">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="password" name="password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="two">
+                    <label><a href="accont.php">Forgot password?</a></label>
+                </div>
+            </div>
+        </form>
+
+        <!------------------- registration form -------------------------->
+        <form method="post" action="traitement_sub.php" class="register-container" id="register" onsubmit="return validateForm();">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nom" id="nom" name="nom" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Prénom" id="prenom" name="prenom" required>
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email" id="ID" name="ID" required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="password" name="password" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <!-- Dropdown menu for account type -->
+            <div class="input-box">
+                <select class="input-field" id="type" name="type">
+                    <option value="ecole">Ecole</option>
+                    <option value="entreprise">Entreprise</option>
+                    <option value="user">Utilisateur</option>
+                </select>
+            </div>
+             <!-- End of dropdown menu -->
+
+            <!-- Captcha -->
+            <div class="g-recaptcha" data-sitekey="6LdHMKApAAAAAPeci6ap_GMOineC76a-KlVRCIDz"></div>
+            <div id="captchaError"></div>
+            <script defer>
+                function validateForm() {            
+                    var captchaResponse = grecaptcha.getResponse();            
+                    while (captchaResponse == "") {                
+                        document.getElementById("captchaError").innerHTML = "<h4>Veuillez compléter le reCAPTCHA.</h4>";
+                        return false;            
+                    }            
+                    return true;
+                }
+            </script>
+
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>   
+
+<script>
+    function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if(i.className === "nav-menu") {
+            i.className += " responsive";
+        } else {
+            i.className = "nav-menu";
+        }
+    }
+</script>
+
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
+
+</body>
+</html>

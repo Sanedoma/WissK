@@ -1,0 +1,161 @@
+/* Reset des styles par défaut */
+ 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 2px 2px #efab23;
+    width: 100%;
+}
+ 
+.navbar a, .navbar button {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 80px;
+}
+ 
+.navbar-logo a {
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    -webkit-text-fill-color: transparent;
+}
+ 
+.navbar-center button {
+    border-radius: 20px;
+    background-color: #28A745;
+    font-weight: bold;
+}
+ 
+.navbar-logout {
+    margin-right: 20px; /* Ajuste cette valeur selon tes besoins */
+}
+ 
+#button {
+    border-radius: 50px;
+    background-color: #DC3545;
+}
+ 
+.navbar button:hover, .navbar a:hover {
+    opacity: 0.7;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-image: url(../background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Styles pour le titre de la page */
+h1 {
+    color: #090909;
+    text-align: center;
+    margin-top: 50px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Styles pour les liens */
+.link ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.link ul li {
+    margin-bottom: 10px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: #e35f5e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Styles pour le formulaire */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff95;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #e35f5e;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #777;
+}
+
+.input-box textarea {
+    height: 100px;
+}
+
+.submit {
+    width: 100%;
+    background-color: #e35f5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #e23737;
+}
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+    margin-top: 40px;
+
+}
