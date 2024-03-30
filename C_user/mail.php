@@ -7,7 +7,16 @@
     <title>Réservation</title>
 </head>
 <body>
-    <h1>Réservation des plâces</h1>
+<section class="navbar">
+    <div class="left-div">
+        <a href="./acceuil.php"><img src="../logowissk3.png" alt=""></a>
+    </div>
+    <div class="right-div">
+        <a href="../connexion.php?route=logout"><button class="button" >Logout</button></a>
+    </div>
+</section>
+
+    <h1>Réservation des places</h1>
 <form method="post">
         <div class="input-box">
             <input type="email" class="input-field" placeholder="Email" id="ID" name="ID" required>
@@ -23,21 +32,21 @@
         <div class="input-box">
             <input type="submit" class="submit" value="Envoyer">
         </div>
-    </form>
+    
 <?php
 if(isset($_POST['message'])){
     $message= "voci un commande de " . $_POST['billet']. "pour le compte" . $_POST['ID'] . "vers " .$_GET['name']. "voci le messsage:" .$_POST['message'];
     $return=mail($_POST['ID'] /* Email de Wissem */,"Réservation", $message, "Reply-to:" . $_POST['ID']);
     if($return){
-        echo "Le message à été envoyer.";
+        echo "<p>Le message à été envoyer. Vous receverez bientôt un Email avec votre (vos) Billet(s).</p>";
         echo "<a href='./acceuil.php'>Revenir à l'accueil</a>";
         }else{
-        echo "Le message n'a pas été envoyer";
+        echo "<p>Le message n'a pas été envoyer. Un problème est survenue</p>";
         echo "<a href='./acceuil.php'>Revenir à l'accueil</a>";
     }
 }
-
 ?>
+</form>
 
 </body>
 </html>

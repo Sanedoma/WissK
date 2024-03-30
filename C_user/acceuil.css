@@ -32,7 +32,7 @@
  
 .navbar-center button {
     border-radius: 20px;
-    background-color: #28A745;
+    background-color: #eb1d13;
     font-weight: bold;
 }
  
@@ -40,7 +40,7 @@
     margin-right: 20px; /* Ajuste cette valeur selon tes besoins */
 }
  
-#button {
+button {
     border-radius: 50px;
     background-color: #DC3545;
 }
@@ -107,12 +107,13 @@ form {
 }
 
 .offre img{
-    float: left;
+    float: right;
+    margin-bottom: 100px;
 }
 
 .offre p{
-    
-    text-align: right;
+    width: 80%;
+    text-align: left;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -192,4 +193,9 @@ img{
     text-align: right;
     width: 240px;
     height: 120px;
+}
+.navbar img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
 }
