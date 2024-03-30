@@ -34,7 +34,12 @@ if (isset($_POST['type'])&& isset($_POST['nom'])&& isset($_POST['prenom']) && is
             fclose($file);
             $_SESSION['username'] = $id;
             $_SESSION['type'] = $type;
-            header("Location: ./C_$type/acceuil.php");
+            if($type == "admin"){
+                header("Location: ./C_admin/acceuil.php");   
+            }else{
+                header("Location: ./C_user/acceuil.php");
+            }
+            
         }
  
         if(!empty($_POST['g-recaptcha-response']) || isset($_POST['g-recaptcha-response'])) {

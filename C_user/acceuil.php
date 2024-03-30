@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,21 +26,41 @@
             <li><a href=""></a></li>
         </ul>
     </div>
-    <form action="mail.php" method="post">
-        <div class="input-box">
-            <input type="email" class="input-field" placeholder="Email" id="ID" name="ID" required>
-            <i class="bx bx-user"></i>
+    <form action="mail.php?name=Mont Saint Michel" method="post">
+        <div class="offre">
+            <h3>Mont Saint Michiel</h3><br><br>
+            <img src="https://www.tourmag.com/photo/art/grande/68138889-48012305.jpg?v=1666188631" alt="">
+            <p>Voyage pour le Mont saint Michiel</p> <br><br>
+            <button type="submit">demende de sejour</button>
         </div>
-        <div class="input-box">
-            <input type="text" class="input-field" placeholder="object" id="object" name="object">
-            <i class="bx bx-lock-alt"></i>
+    </form>
+    <form action="mail.php?name=Deauvile" method="post">
+        <div class="offre">
+            <h3>Deauville</h3><br><br>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRHRyZRjyZBydv_aoOgBbbwWbW6DSHW9rJzIwtug7hEkJ7xtnOVl7cwHzmMu2cADsr6uHlZLd8h5-4bYB5gt_PG4EoakS6LDSRjL7jU6g" alt="">
+            <p>LONG DAY TRIP ☀ 8h00 sur place!
+
+Deauville est une des stations balnéaires les plus célèbres de France , sans oublier son fameux casino de renommée internationale!
+Nos accompagnateurs sont là pour faciliter les échanges et créer une ambiance conviviale avec votre participation enthousiaste bien entendu ツ
+Venez passer un agreable weekend <br>
+
+VOYAGE MAINTENU ou REMBOURSÉ (si une restriction gouvernementale impacte un voyage et mène à son report ou annulation, 
+chaque participant pourra librement choisir entre être remboursé ou bien reporter sa participation à une date ultérieure si souhaité et proposé)</p> <br><br>
+            <button type="submit">Demende de sejour</button>
         </div>
-        <div class="input-box">
-            <textarea name="message" id="message" cols="30" rows="10">entrer votre message</textarea>
-        </div>
-        <div class="input-box">
-            <input type="submit" class="submit" value="Sign In">
-        </div>
+    </form>
+    <form action="">
+        <h3>Trouville</h3><br><br>
+        <img src="https://www.normandie-tourisme.fr/wp-content/uploads/2020/04/villa-de-trouville-bertl-123-shutterstoc-com-1200x800.jpg" alt="">
+        <p>LONG DAY TRIP ☀ 8h00 sur place!
+
+Deauville est une des stations balnéaires les plus célèbres de France , sans oublier son fameux casino de renommée internationale!
+Nos accompagnateurs sont là pour faciliter les échanges et créer une ambiance conviviale avec votre participation enthousiaste bien entendu ツ
+Venez passer un agreable weekend <br>
+
+VOYAGE MAINTENU ou REMBOURSÉ (si une restriction gouvernementale impacte un voyage et mène à son report ou annulation, 
+chaque participant pourra librement choisir entre être remboursé ou bien reporter sa participation à une date ultérieure si souhaité et proposé)</p> <br>
+        <button type="submit">Demande de sejour</button>
     </form>
     <br><br><br>
 </body>
@@ -55,7 +75,7 @@
     </div>
     <div class = ""></div>
     <p> <a href="">Mentions légales</a> | <a href="">Politique de Confidentialité</a></p>
-    <p>Made by "Nom de l'asso"</p>
+    <p>Made by "Sanedoma" <img src="" alt="sigle"></p>
 </footer>
 </section>
 </html>
