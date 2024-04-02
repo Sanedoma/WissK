@@ -13,7 +13,7 @@
         <a href="./acceuil.php"><img src="../logowissk3.png" alt=""></a>
     </div>
     <div class="right-div">
-        <a href="../connexion.php?route=logout"><button class="button" >Logout</button></a>
+        <a class="button" href="../connexion.php?route=logout"><button>Logout</button></a>
     </div>
 </section>
 
